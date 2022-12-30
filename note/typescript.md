@@ -14,7 +14,7 @@ function identity<T>(arg: T): T{
 
 ```typescript
 interface Point {
-	x: number;
+  x: number;
   y: number;
 }
 
