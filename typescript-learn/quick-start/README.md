@@ -17,7 +17,7 @@
 3. 新建tsconfig.json
 
    ```bash
-     touch tsconfig.json
+   touch tsconfig.json
    ```
 
 4. 自动初始化一个tsling.json
