@@ -4,15 +4,15 @@
 
 1. 初始化一个新的npm项目
 
-  ```bash
-  npm init
-  ```
+    ```bash
+    npm init
+    ```
 
 2. 安装TSC、TSLint和NodeJS的类型声明
 
-  ```bash
-  npm install --save-dev typescript tslint @types/node
-  ```
+    ```bash
+    npm install --save-dev typescript tslint @types/node
+    ```
 
 3. 新建tsconfig.json
 
