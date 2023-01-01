@@ -1,3 +1,72 @@
+## 语法
+
+#### 索引访问类型
+
+##### 索引类型查询
+
+```typescript
+keyof Type
+```
+
+```typescript
+interface Point {
+  x: number;
+  y: number;
+}
+
+type T = keyof Point; // 'x' | 'y'
+```
+
+##### 索引访问类型
+
+```typescript
+T[K];
+```
+
+##### 索引类型的应用
+
+> K extends keyof T
+
+```typescript
+ function getProperty<T, K extends keyof T>(
+   obj: T, key: K
+ ): T[K] {
+     return obj[key];
+ }
+
+ interface Circle {
+     kind: 'circle';
+     radius: number;
+ }
+
+ function f(circle: Circle) {
+    // 正确，能够推断出 radius 的类型为 'circle' 类型
+     const kind = getProperty(circle, 'kind');
+
+    // 正确，能够推断出 radius 的类型为 number 类型
+     const radius = getProperty(circle, 'radius');
+
+    // 错误
+     const unknown = getProperty(circle, 'unknown');
+     //                                   ~~~~~~~~~
+     // 编译错误：'unknown'类型不能赋值给'kind' |'radius'
+ }
+```
+
+#### 短路求值
+
+```typescript
+obj?.age;
+```
+
+二元逻辑运算符“&&”和“||”也具有短路求值的特性
+
+#### 空值合并运算符
+
+```typescript
+a ?? b;
+```
+
 ## 接口
 
 ### 接口声明
