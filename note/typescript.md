@@ -28,29 +28,47 @@ T[K];
 > K extends keyof T
 
 ```typescript
- function getProperty<T, K extends keyof T>(
-   obj: T, key: K
- ): T[K] {
-     return obj[key];
- }
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
 
- interface Circle {
-     kind: 'circle';
-     radius: number;
- }
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
 
- function f(circle: Circle) {
-    // 正确，能够推断出 radius 的类型为 'circle' 类型
-     const kind = getProperty(circle, 'kind');
+function f(circle: Circle) {
+  // 正确，能够推断出 radius 的类型为 'circle' 类型
+  const kind = getProperty(circle, "kind");
 
-    // 正确，能够推断出 radius 的类型为 number 类型
-     const radius = getProperty(circle, 'radius');
+  // 正确，能够推断出 radius 的类型为 number 类型
+  const radius = getProperty(circle, "radius");
 
-    // 错误
-     const unknown = getProperty(circle, 'unknown');
-     //                                   ~~~~~~~~~
-     // 编译错误：'unknown'类型不能赋值给'kind' |'radius'
- }
+  // 错误
+  const unknown = getProperty(circle, "unknown");
+  //                                   ~~~~~~~~~
+  // 编译错误：'unknown'类型不能赋值给'kind' |'radius'
+}
+```
+
+#### 映射对象类型
+
+> 映射对象类型是一种独特的对象类型，它能够将已有的对象类型映射为新的对象类型。
+
+#### 条件类型
+
+> 若类型 T 能够赋值给类型 U，则条件类型的结果为类型 X，否则条件类型的结果为类型 Y。
+
+```typescript
+T extends U ? X : Y
+```
+
+```typescript
+// string
+type T0 = true extends boolean ? string : number;
+
+// number
+type T1 = string extends boolean ? string : number;
 ```
 
 #### 短路求值
