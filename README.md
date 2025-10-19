@@ -4,7 +4,7 @@
 
 ## 尚硅谷 TypeScript 教程
 
-- [📁 贪吃蛇游戏代码目录](./尚硅谷 TypeScript 教程/代码/chapter02/
+- [📁 贪吃蛇游戏代码目录](./尚硅谷TypeScript教程/代码/chapter02/part2/) - TypeScript 实现的经典贪吃蛇游戏
 
 ### 快速开始
 
