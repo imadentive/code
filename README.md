@@ -4,11 +4,7 @@
 
 ## 尚硅谷 TypeScript 教程
 
-### 项目导航
-
-- [📁 贪吃蛇游戏代码目录](./尚硅谷TypeScript教程/代码/chapter02/part2/) - TypeScript 实现的经典贪吃蛇游戏
-- [📁 TypeScript 基础教程](./尚硅谷TypeScript教程/代码/chapter01/) - TypeScript 基础语法和概念
-- [📁 TypeScript 高级类型](./黑马程序员前端TypeScript教程/TypeScript高级类型/) - 高级类型和泛型应用
+- [📁 贪吃蛇游戏代码目录](./尚硅谷 TypeScript 教程/代码/chapter02/
 
 ### 快速开始
 
